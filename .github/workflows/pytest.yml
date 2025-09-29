@@ -26,4 +26,6 @@ jobs:
           pip install pytest
 
       - name: Run pytest
-        run: pytest pytest-kursus/tests/ --maxfail=5 --disable-warnings -q
+        run: |
+          PYTHONPATH=pytest-kursus pytest pytest-kursus/tests/ --maxfail=5 --disable-warnings -q
+
